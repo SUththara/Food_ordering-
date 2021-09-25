@@ -16,8 +16,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.food_on.app.R;
-import com.food_on.app.ReusableCode.ReusableCodeForAll;
+//import com.gofood.app.R;
+//import com.gofood.app.ReusableCode.ReusableCodeForAll;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
@@ -30,7 +30,7 @@ import com.hbb20.CountryCodePicker;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class ChefRegisteration extends AppCompatActivity {
+public class ChefRegistration extends AppCompatActivity {
 
     String[] Maharashtra = {"Mumbai", "Pune", "Aurangabad"};
     String[] Gujarat = {"Ahemdabad", "Rajkot", "Surat"};
@@ -69,7 +69,7 @@ public class ChefRegisteration extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chef_registeration);
+        setContentView(R.layout.activity_chef_registration);
 
         Fname = (TextInputLayout) findViewById(R.id.Firstname);
         Lname = (TextInputLayout) findViewById(R.id.Lastname);
@@ -99,7 +99,7 @@ public class ChefRegisteration extends AppCompatActivity {
                     for (String text : Maharashtra) {
                         list.add(text);
                     }
-                    ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(ChefRegisteration.this, android.R.layout.simple_spinner_item, list);
+                    ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(ChefRegistration.this, android.R.layout.simple_spinner_item, list);
 
                     Cityspin.setAdapter(arrayAdapter);
                 }
@@ -108,7 +108,7 @@ public class ChefRegisteration extends AppCompatActivity {
                     for (String text : Gujarat) {
                         list.add(text);
                     }
-                    ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(ChefRegisteration.this, android.R.layout.simple_spinner_item, list);
+                    ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(ChefRegistration.this, android.R.layout.simple_spinner_item, list);
 
                     Cityspin.setAdapter(arrayAdapter);
                 }
@@ -131,7 +131,7 @@ public class ChefRegisteration extends AppCompatActivity {
                     for (String text : Mumbai) {
                         listt.add(text);
                     }
-                    ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(ChefRegisteration.this, android.R.layout.simple_spinner_item, listt);
+                    ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(ChefRegistration.this, android.R.layout.simple_spinner_item, listt);
                     Suburban.setAdapter(arrayAdapter);
                 }
 
@@ -140,7 +140,7 @@ public class ChefRegisteration extends AppCompatActivity {
                     for (String text : Pune) {
                         listt.add(text);
                     }
-                    ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(ChefRegisteration.this, android.R.layout.simple_spinner_item, listt);
+                    ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(ChefRegistration.this, android.R.layout.simple_spinner_item, listt);
                     Suburban.setAdapter(arrayAdapter);
                 }
 
@@ -149,7 +149,7 @@ public class ChefRegisteration extends AppCompatActivity {
                     for (String text : Aurangabad) {
                         listt.add(text);
                     }
-                    ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(ChefRegisteration.this, android.R.layout.simple_spinner_item, listt);
+                    ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(ChefRegistration.this, android.R.layout.simple_spinner_item, listt);
                     Suburban.setAdapter(arrayAdapter);
                 }
             }
@@ -194,7 +194,7 @@ public class ChefRegisteration extends AppCompatActivity {
 
                 if (isValid()) {
 
-                    final ProgressDialog mDialog = new ProgressDialog(ChefRegisteration.this);
+                    final ProgressDialog mDialog = new ProgressDialog(ChefRegistration.this);
                     mDialog.setCancelable(false);
                     mDialog.setCanceledOnTouchOutside(false);
                     mDialog.setMessage("Registering please wait...");
@@ -237,7 +237,7 @@ public class ChefRegisteration extends AppCompatActivity {
                                                     @Override
                                                     public void onComplete(@NonNull Task<Void> task) {
                                                         if (task.isSuccessful()) {
-                                                            AlertDialog.Builder builder = new AlertDialog.Builder(ChefRegisteration.this);
+                                                            AlertDialog.Builder builder = new AlertDialog.Builder(ChefRegistration.this);
                                                             builder.setMessage("Registered Successfully,Please Verify your Email");
                                                             builder.setCancelable(false);
                                                             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -247,7 +247,7 @@ public class ChefRegisteration extends AppCompatActivity {
                                                                     dialog.dismiss();
 
                                                                     String phonenumber = Cpp.getSelectedCountryCodeWithPlus() + mobile;
-                                                                    Intent b = new Intent(ChefRegisteration.this, ChefVerifyPhone.class);
+                                                                    Intent b = new Intent(ChefRegistration.this, ChefVerifyPhone.class);
                                                                     b.putExtra("phonenumber", phonenumber);
                                                                     startActivity(b);
 
@@ -258,7 +258,7 @@ public class ChefRegisteration extends AppCompatActivity {
 
                                                         } else {
                                                             mDialog.dismiss();
-                                                            ReusableCodeForAll.ShowAlert(ChefRegisteration.this, "Error", task.getException().getMessage());
+                                                            ReusableCodeForAll.ShowAlert(ChefRegistration.this, "Error", task.getException().getMessage());
 
                                                         }
                                                     }
@@ -271,7 +271,7 @@ public class ChefRegisteration extends AppCompatActivity {
 
                             } else {
                                 mDialog.dismiss();
-                                ReusableCodeForAll.ShowAlert(ChefRegisteration.this, "Error", task.getException().getMessage());
+                                ReusableCodeForAll.ShowAlert(ChefRegistration.this, "Error", task.getException().getMessage());
                             }
 
                         }
@@ -287,7 +287,7 @@ public class ChefRegisteration extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(ChefRegisteration.this, ChefLogin.class);
+                Intent i = new Intent(ChefRegistration.this, Cheflogin.class);
                 startActivity(i);
                 finish();
             }
@@ -297,7 +297,7 @@ public class ChefRegisteration extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent e = new Intent(ChefRegisteration.this, Chefloginphone.class);
+                Intent e = new Intent(ChefRegistration.this, Chefloginphone.class);
                 startActivity(e);
                 finish();
             }
