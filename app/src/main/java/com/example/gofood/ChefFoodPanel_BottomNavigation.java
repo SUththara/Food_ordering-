@@ -15,14 +15,14 @@ import com.example.gofood.chefFoodPanel.ChefProfileFragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class ChefFoodPanel_BottomNavigation extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
+public class ChefFoodPanel_BottomNavigation extends AppCompatActivity implements BottomNavigationView.OnItemSelectedListener{//changed OnNavigationItemSelectedListener to OnItemSelectedListener
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chef_food_panel_bottom_navigation);
         BottomNavigationView navigationView = findViewById(R.id.chef_bottom_navigation);
-        navigationView.setOnNavigationItemSelectedListener(this);
+        navigationView.setOnItemSelectedListener(this);//changed setOnNavigationItemSelectedListener to setOnItemSelectedListener
     }
 
     @Override

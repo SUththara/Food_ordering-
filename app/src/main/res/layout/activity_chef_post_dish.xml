@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".chefFoodPanel.Chef_PostDish">
+    tools:context=".chefFoodPanel.Chef_PostDish"
+    android:background="@drawable/img11">
 
         <ImageButton
             android:id="@+id/image_upload"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
             android:background="@drawable/camerashapebtn"
             app:srcCompat="@drawable/ic_camera_24"
             app:layout_constraintEnd_toEndOf="parent"
@@ -26,10 +27,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_upload"
+            app:layout_constraintVertical_bias="0.15"
+            app:layout_constraintHorizontal_bias="0.53">
+
+
 
                 <TextView
                     android:id="@+id/textView"
@@ -37,7 +41,7 @@
                     android:layout_height="30dp"
                     android:layout_marginLeft="5dp"
                     android:text="Dish Name"
-                    android:textColor="@color/Black"
+                    android:textColor="@color/white"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
