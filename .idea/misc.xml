@@ -20,6 +20,37 @@
         <entry key="..\:/GoFood/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/GoFood/app/src/main/res/layout/activity_main_menu.xml" value="0.1" />
         <entry key="..\:/GoFood/app/src/main/res/layout/activity_registration.xml" value="0.1" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/drawable/camerashapebtn.xml" value="0.2703125" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/drawable/ic_camera_24.xml" value="0.1" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/drawable/ic_pending_orders_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_chef_final_orders.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_chef_food_panel_bottom_navigation.xml" value="0.25271739130434784" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_chef_forgot_password.xml" value="0.25271739130434784" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_chef_home_fragment.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_chef_post_dish.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_chef_registration.xml" value="0.25271739130434784" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_chef_verify_phone.xml" value="0.264" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_chefhome_adapter.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_cheflogin.xml" value="0.25271739130434784" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_chefloginphone.xml" value="0.25271739130434784" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_chefsendotp.xml" value="0.25271739130434784" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_customer_food_panel_bottom_navigation.xml" value="0.23278985507246377" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_delivery_loginphone.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_delivery_send_otp.xml" value="0.14427083333333332" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_delivery_verify_phone.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_forgot_password.xml" value="0.25271739130434784" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_login.xml" value="0.25271739130434784" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_loginphone.xml" value="0.1" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_registration.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_sendotp.xml" value="0.25271739130434784" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/activity_verify_phone.xml" value="0.1" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/fragment_chef_home.xml" value="0.23731884057971014" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/fragment_chef_orders.xml" value="0.23731884057971014" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/fragment_chef_pendingorders.xml" value="0.23731884057971014" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/layout/fragment_chef_profile.xml" value="0.136" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/menu/chef_bottom_navigation.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Jasmi/AndroidStudioProjects/Food_ordering-/app/src/main/res/menu/logout.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

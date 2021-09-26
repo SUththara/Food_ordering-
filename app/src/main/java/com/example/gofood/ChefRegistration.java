@@ -287,7 +287,7 @@ public class ChefRegistration extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(ChefRegistration.this, Cheflogin.class);
+                Intent i = new Intent(ChefRegistration.this, ChefLogin.class);
                 startActivity(i);
                 finish();
             }

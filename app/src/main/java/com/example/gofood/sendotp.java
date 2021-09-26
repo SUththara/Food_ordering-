@@ -26,40 +26,38 @@ import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
 
-public class ChefVerifyPhone extends AppCompatActivity {
+public class sendotp extends AppCompatActivity {
+
 
     String verificationId;
     FirebaseAuth FAuth;
-    Button verify;
-    Button Resend;
+    Button verify, Resend;
     TextView txt;
-    EditText entercode;
     String phonenumber;
+    EditText entercode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chef_verify_phone);
-
+        setContentView(R.layout.activity_sendotp);
 
         phonenumber = getIntent().getStringExtra("phonenumber").trim();
-
         sendverificationcode(phonenumber);
+
         entercode = (EditText) findViewById(R.id.phoneno);
         txt = (TextView) findViewById(R.id.text);
         Resend = (Button) findViewById(R.id.Resendotp);
         FAuth = FirebaseAuth.getInstance();
-        verify = (Button) findViewById(R.id.Verify);
         Resend.setVisibility(View.INVISIBLE);
         txt.setVisibility(View.INVISIBLE);
+        verify = (Button) findViewById(R.id.Verify);
         verify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
 
-                String code = entercode.getText().toString().trim();
                 Resend.setVisibility(View.INVISIBLE);
-
+                String code = entercode.getText().toString().trim();
                 if (code.isEmpty() && code.length() < 6) {
                     entercode.setError("Enter code");
                     entercode.requestFocus();
@@ -67,6 +65,7 @@ public class ChefVerifyPhone extends AppCompatActivity {
                 }
                 verifyCode(code);
             }
+
         });
 
         new CountDownTimer(60000, 1000) {
@@ -119,29 +118,28 @@ public class ChefVerifyPhone extends AppCompatActivity {
 
     private void verifyCode(String code) {
         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, code);
-        linkCredential(credential);
+        signInwithCredential(credential);
     }
 
-    private void linkCredential(PhoneAuthCredential credential) {
-
-        FAuth.getCurrentUser().linkWithCredential(credential)
-                .addOnCompleteListener(ChefVerifyPhone.this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-
-                            Intent intent = new Intent(ChefVerifyPhone.this,MainMenu.class);
-                            startActivity(intent);
-                            finish();
-
-
-                        } else {
-                            ReusableCodeForAll.ShowAlert(ChefVerifyPhone.this,"Error",task.getException().getMessage());
+    private void signInwithCredential(PhoneAuthCredential credential) {
+        try {
+            FAuth.signInWithCredential(credential)
+                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                Intent intent = new Intent(String.valueOf(sendotp.this));
+                                startActivity(intent);
+                                finish();
+                            } else {
+                                ReusableCodeForAll.ShowAlert(sendotp.this,"Error",task.getException().getMessage());
+                            }
                         }
-                    }
-                });
+                    });
+        } catch (Exception e) {
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
+        }
     }
-
 
     private void sendverificationcode(String number) {
 
@@ -150,36 +148,32 @@ public class ChefVerifyPhone extends AppCompatActivity {
                 60,
                 TimeUnit.SECONDS,
                 (Activity) TaskExecutors.MAIN_THREAD,
-                mCallBack
+                new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+                    @Override
+                    public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                        super.onCodeSent(s, forceResendingToken);
+
+                        verificationId = s;
+
+                    }
+
+                    @Override
+                    public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
+
+
+                        String code = phoneAuthCredential.getSmsCode();
+                        if (code != null) {
+                            entercode.setText(code);
+                            verifyCode(code);
+                        }
+                    }
+
+                    @Override
+                    public void onVerificationFailed(FirebaseException e) {
+
+                        Toast.makeText(sendotp.this, "THis 2:" + e.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                }
         );
     }
-
-    private PhoneAuthProvider.OnVerificationStateChangedCallbacks
-            mCallBack = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-        @Override
-        public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-            super.onCodeSent(s, forceResendingToken);
-
-            verificationId = s;
-        }
-
-        @Override
-        public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
-
-
-            String code = phoneAuthCredential.getSmsCode();
-            if (code != null) {
-                entercode.setText(code);
-                verifyCode(code);
-
-            }
-        }
-
-        @Override
-        public void onVerificationFailed(FirebaseException e) {
-
-            Toast.makeText(ChefVerifyPhone.this, e.getMessage(), Toast.LENGTH_LONG).show();
-        }
-    };
 }
-

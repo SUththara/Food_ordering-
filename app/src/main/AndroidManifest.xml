@@ -10,6 +10,51 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoFood">
         <activity
+            android:name=".chefFoodPanel.Chef_PostDish"
+            android:exported="true" />
+        <activity
+            android:name=".CustomerFoodPanel_BottomNavigation"
+            android:exported="true" />
+        <activity
+            android:name=".ChefFoodPanel_BottomNavigation"
+            android:exported="true" />
+        <activity
+            android:name=".Delivery_SendOtp"
+            android:exported="true" />
+        <activity
+            android:name=".Delivery_ForgotPassword"
+            android:exported="true" />
+        <activity
+            android:name=".Delivery_FoodPanelBottomNavigation"
+            android:exported="true" />
+        <activity
+            android:name=".Delivery_VerifyPhone"
+            android:exported="true" />
+        <activity
+            android:name=".ChefFinalOrders"
+            android:exported="true" />
+        <activity
+            android:name=".ChefhomeAdapter"
+            android:exported="true" />
+        <activity
+            android:name=".ChefHomeFragment"
+            android:exported="true" />
+        <activity
+            android:name=".sendotp"
+            android:exported="true" />
+        <activity
+            android:name=".Chefsendotp"
+            android:exported="true" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="true" />
+        <activity
+            android:name=".ChefForgotPassword"
+            android:exported="true" />
+        <activity
+            android:name=".VerifyPhone"
+            android:exported="true" />
+        <activity
             android:name=".Delivery_Registration"
             android:exported="true" />
         <activity

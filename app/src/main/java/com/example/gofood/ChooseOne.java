@@ -58,7 +58,7 @@ public class ChooseOne extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(type.equals("Email")){
-                    Intent loginemail  = new Intent(ChooseOne.this,Cheflogin.class);
+                    Intent loginemail  = new Intent(ChooseOne.this,ChefLogin.class);
                     startActivity(loginemail);
                     finish();
                 }
@@ -111,7 +111,7 @@ public class ChooseOne extends AppCompatActivity {
                     finish();
                 }
                 if(type.equals("SignUp")){
-                    Intent Registerdelivery  = new Intent(ChooseOne.this,Delivery_Registration.class);
+                    Intent Registerdelivery  = new Intent(ChooseOne.this,Delivery_registration.class);
                     startActivity(Registerdelivery);
                 }
 
