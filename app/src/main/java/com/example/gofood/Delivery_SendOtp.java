@@ -3,7 +3,6 @@ package com.example.gofood;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -13,8 +12,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//import com.gofood.app.R;
-//import com.gofood.app.ReusableCode.ReusableCodeForAll;
+import com.example.gofood.R;
+import com.example.gofood.ReusableCode.ReusableCodeForAll;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskExecutors;
@@ -39,7 +38,7 @@ public class Delivery_SendOtp extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_delivery_send_otp);
+        setContentView(R.layout.activity_delivery__send_otp);
         phonenumber = getIntent().getStringExtra("phonenumber").trim();
         sendverificationcode(phonenumber);
         entercode = (EditText) findViewById(R.id.ed1);
@@ -139,7 +138,7 @@ public class Delivery_SendOtp extends AppCompatActivity {
                 number,
                 60,
                 TimeUnit.SECONDS,
-                (Activity) TaskExecutors.MAIN_THREAD,
+                TaskExecutors.MAIN_THREAD,
                 mCallBack
         );
     }

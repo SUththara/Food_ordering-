@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Black"
-    tools:context=".MainActivity">
+    android:background="@color/white"
+    tools:context="com.example.gofood.MainActivity">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
         android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:adjustViewBounds="false"
@@ -19,7 +19,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.477"/>
+        app:layout_constraintVertical_bias="0.429" />
+
     <TextView
         android:id="@+id/textView7"
         android:layout_width="217dp"
@@ -28,17 +29,17 @@
         android:text="Cup o' JAVA"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textColor="#FDFDFD"
+        android:textColor="@color/Blacklogo"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.747" />
+        app:layout_constraintVertical_bias="0.68" />
 
 
-        app:layout_constraintVertical_bias="0.285" />
+    app:layout_constraintVertical_bias="0.285" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,6 @@ package com.example.gofood;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -13,8 +12,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//import com.gofood.app.R;
-//import com.gofood.app.ReusableCode.ReusableCodeForAll;
+import com.example.gofood.R;
+import com.example.gofood.ReusableCode.ReusableCodeForAll;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskExecutors;
@@ -128,7 +127,7 @@ public class sendotp extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                Intent intent = new Intent(String.valueOf(sendotp.this));
+                                Intent intent = new Intent(sendotp.this, CustomerFoodPanel_BottomNavigation.class);
                                 startActivity(intent);
                                 finish();
                             } else {
@@ -147,7 +146,7 @@ public class sendotp extends AppCompatActivity {
                 number,
                 60,
                 TimeUnit.SECONDS,
-                (Activity) TaskExecutors.MAIN_THREAD,
+                TaskExecutors.MAIN_THREAD,
                 new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
                     @Override
                     public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {

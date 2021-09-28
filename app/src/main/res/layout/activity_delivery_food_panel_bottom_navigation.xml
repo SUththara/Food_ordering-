@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/delivery"
     tools:context=".Delivery_FoodPanelBottomNavigation">
 
 
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </FrameLayout>
+        android:layout_height="match_parent"></FrameLayout>
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/delivery_bottom_navigation"
             android:layout_width="match_parent"

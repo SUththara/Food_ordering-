@@ -9,11 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-//import com.gofood.app.R;
+import com.example.gofood.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.hbb20.CountryCodePicker;
 
-public class Delivery_Loginphone extends AppCompatActivity {
+public class Delivery_LoginPhone extends AppCompatActivity {
 
 
     EditText num;
@@ -26,7 +26,7 @@ public class Delivery_Loginphone extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_delivery_loginphone);
+        setContentView(R.layout.activity_delivery__login_phone);
 
         num = (EditText) findViewById(R.id.Dphonenumber);
         sendotp = (Button) findViewById(R.id.Sendotp);
@@ -41,7 +41,7 @@ public class Delivery_Loginphone extends AppCompatActivity {
             public void onClick(View v) {
                 numberr = num.getText().toString().trim();
                 String phonenumber = cpp.getSelectedCountryCodeWithPlus() + numberr;
-                Intent b = new Intent(Delivery_Loginphone.this, Delivery_SendOtp.class);
+                Intent b = new Intent(Delivery_LoginPhone.this, Delivery_SendOtp.class);
                 b.putExtra("phonenumber", phonenumber);
                 startActivity(b);
                 finish();
@@ -53,7 +53,7 @@ public class Delivery_Loginphone extends AppCompatActivity {
         txtsignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent a = new Intent(Delivery_Loginphone.this, Delivery_registration.class);
+                Intent a = new Intent(Delivery_LoginPhone.this, Delivery_registration.class);
                 startActivity(a);
                 finish();
             }
@@ -63,7 +63,7 @@ public class Delivery_Loginphone extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent em = new Intent(Delivery_Loginphone.this, Delivery_Login.class);
+                Intent em = new Intent(Delivery_LoginPhone.this, Delivery_Login.class);
                 startActivity(em);
                 finish();
             }

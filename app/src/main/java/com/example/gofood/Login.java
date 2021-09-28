@@ -12,8 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//import com.gofood.app.R;
-//import com.gofood.app.ReusableCode.ReusableCodeForAll;
+import com.example.gofood.R;
+import com.example.gofood.ReusableCode.ReusableCodeForAll;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
@@ -106,7 +106,7 @@ public class Login extends AppCompatActivity {
             SignInphone.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent=new Intent(Login.this,Login.class);
+                    Intent intent=new Intent(Login.this,Loginphone.class);
                     startActivity(intent);
                 }
             });

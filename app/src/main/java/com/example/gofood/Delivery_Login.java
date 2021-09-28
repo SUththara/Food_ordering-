@@ -12,8 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//import com.gofood.app.R;
-//import com.gofood.app.ReusableCode.ReusableCodeForAll;
+import com.example.gofood.R;
+import com.example.gofood.ReusableCode.ReusableCodeForAll;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
@@ -33,7 +33,7 @@ public class Delivery_Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_delivery_login);
+        setContentView(R.layout.activity_delivery__login);
 
         email = (TextInputLayout) findViewById(R.id.Demail);
         pass = (TextInputLayout) findViewById(R.id.Dpassword);
@@ -109,7 +109,7 @@ public class Delivery_Login extends AppCompatActivity {
         Signinphone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent q = new Intent(Delivery_Login.this, Delivery_Loginphone.class);
+                Intent q = new Intent(Delivery_Login.this,Delivery_Loginphone.class);
                 startActivity(q);
                 finish();
             }

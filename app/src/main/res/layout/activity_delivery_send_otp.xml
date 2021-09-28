@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Delivery_SendOtp">
+    android:background="@drawable/otp"
+    tools:context="com.example.gofood.Delivery_SendOtp">
 
     <LinearLayout
         android:id="@+id/linearlayout"

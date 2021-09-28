@@ -10,7 +10,7 @@
     <item
         android:id="@+id/pendingOrders"
         android:title="Pending Orders"
-        android:icon="@drawable/ic_pending_orders_24"/>
+        android:icon="@drawable/ic_baseline_autorenew_24"/>
 
     <item
         android:id="@+id/Order"

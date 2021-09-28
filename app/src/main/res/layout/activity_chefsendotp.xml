@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Chefsendotp">
+    android:background="@drawable/login2"
+    tools:context="com.example.gofood.Chefsendotp">
 
     <LinearLayout
         android:id="@+id/linearlayout"
@@ -59,16 +60,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:background="@drawable/btnblueish"
+            android:background="@drawable/btnbluish"
             android:text="Verify"
             android:textColor="@color/white"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Lpassword"
-            app:layout_constraintVertical_bias="0.174"
-            android:textSize="18sp"/>
+            app:layout_constraintVertical_bias="0.174" />
 
         <Button
             android:id="@+id/Resendotp"

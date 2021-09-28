@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChefFoodPanel_BottomNavigation">
+    tools:context="com.example.gofood.ChefFoodPanel_BottomNavigation">
 
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/chef_bottom_navigation"/>
+        android:layout_above="@id/chef_bottom_navigation" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/chef_bottom_navigation"
@@ -19,10 +19,11 @@
         android:layout_alignParentBottom="true"
         android:background="?android:attr/windowBackground"
         android:backgroundTint="@color/white"
-        app:itemIconTint="@color/menu_item_color"
-        app:itemTextColor="@color/menu_item_color"
-        app:menu="@menu/chef_bottom_navigation"/>
+        app:itemIconTint="@color/Blacklogo"
+        app:itemTextColor="@color/Blacklogo"
+        app:menu="@menu/chef_bottom_navigation" />
 
 
 
 </RelativeLayout>
+

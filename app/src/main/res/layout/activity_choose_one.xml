@@ -5,13 +5,14 @@
     android:id="@+id/back3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/img8"
     tools:context=".ChooseOne">
 
 
     <LinearLayout
         android:id="@+id/linearlayout"
-        android:layout_width="265dp"
-        android:layout_height="330dp"
+        android:layout_width="254dp"
+        android:layout_height="368dp"
         android:background="@drawable/background_shape"
         android:orientation="vertical"
         android:padding="15dp"

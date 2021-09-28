@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img8"
-    tools:context=".Loginphone">
+    android:background="@drawable/login2"
+    tools:context="com.example.gofood.LoginPhone">
 
 
     -

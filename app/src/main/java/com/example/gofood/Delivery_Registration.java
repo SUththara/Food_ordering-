@@ -272,7 +272,7 @@ class Delivery_registration extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent e = new Intent(Delivery_registration.this, Delivery_Loginphone.class);
+                Intent e = new Intent(Delivery_registration.this, Delivery_LoginPhone.class);
                 startActivity(e);
                 finish();
             }

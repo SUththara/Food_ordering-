@@ -5,19 +5,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-//import com.bumptech.glide.Glide;
-//import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
+import com.bumptech.glide.Glide;
+import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.google.firebase.database.DatabaseReference;
 
 import java.util.List;
-import com.example.gofood.UpdateDishModal;
+
 import com.example.gofood.R;
 
 public class CustomerHomeAdapter extends RecyclerView.Adapter<CustomerHomeAdapter.ViewHolder> {
@@ -41,7 +40,7 @@ public class CustomerHomeAdapter extends RecyclerView.Adapter<CustomerHomeAdapte
     @Override
     public void onBindViewHolder(@NonNull CustomerHomeAdapter.ViewHolder holder, int position) {
         final UpdateDishModal updateDishModal=updateDishModalList.get(position);
-        //Glide.with(mcontext).load(updateDishModal.getImageURL()).into(holder.imageView);
+        Glide.with(mcontext).load(updateDishModal.getImageURL()).into(holder.imageView);
         holder.Dishname.setText(updateDishModal.getPrice());
         updateDishModal.getRandomUID();
         updateDishModal.getChefId();
